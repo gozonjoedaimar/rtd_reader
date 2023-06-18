@@ -1,0 +1,33 @@
+{
+  "name": "rtd_reader",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node -r dotenv/config ./bin/www",
+    "tailwind:css": "postcss resources/css/tailwind.css -o resources/css/vendor.css",
+    "build": "npm run tailwind:css",
+    "build-start": "npm run tailwind:css && npm start",
+    "start-dev": "npx nodemon --exec \"npm run build-start\" --ext pug,js",
+    "build-doc": "sphinx-build -b html docs/ build/html"
+  },
+  "dependencies": {
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^16.0.3",
+    "express": "~4.16.1",
+    "express-session": "^1.17.3",
+    "google-recaptcha": "^1.1.0",
+    "http-errors": "~1.6.3",
+    "mongoose": "^7.2.1",
+    "morgan": "~1.9.1",
+    "pug": "2.0.0-beta11"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "node": "^18.14.0",
+    "postcss": "^8.4.24",
+    "postcss-cli": "^10.1.0",
+    "tailwindcss": "^3.3.2"
+  }
+}

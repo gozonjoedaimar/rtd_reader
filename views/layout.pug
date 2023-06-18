@@ -1,0 +1,9 @@
+doctype html
+html
+  head
+    title= message && error && error.status ? error.status + " - " + message : title
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='/vendor.css')
+    script(src="https://www.google.com/recaptcha/api.js" async defer)
+  body
+    block content

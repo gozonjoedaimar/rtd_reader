@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  div(class="min-h-screen flex items-center justify-center")
+    div(class="text-center")
+      if (__config('system/env') === 'development')
+        h1(class="text-6xl font-bold text-red-500 mb-4") #{message}
+        h2(class="text-2xl text-gray-700 mb-2") #{error.status}
+        pre(class="text-left text-xs max-w-3xl px-4 pb-3 mt-8 overflow-x-auto") #{error.stack}
+      else
+        h1(class="text-6xl font-bold text-red-500 mb-4")
+          | Oops! We messed up. Sorry about that!
+        h2(class="text-2xl text-gray-700 mb-2") #{error.status}

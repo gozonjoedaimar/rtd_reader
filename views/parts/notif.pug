@@ -1,0 +1,20 @@
+if (notif && notif.message)
+  if (notif.type === 'success')
+    div(class=`border-l-4 border-green-600 bg-green-200 text-green-600 p-4 mb-3`)
+      div.container.mx-auto.flex.items-center
+        svg.w-6.h-6.fill-current.mr-4(xmlns="http://www.w3.org/2000/svg", viewBox="0 0 24 24")
+          path(d="M0 11l2-2 5 5L18 3l2 2L7 18")
+        span.text-sm= notif.message
+  if (notif.type === 'danger')
+    div(class=`border-l-4 border-red-600 bg-red-200 text-red-600 p-4 mb-3`)
+      div.container.mx-auto.flex.items-center
+        svg.w-6.h-6.fill-current.mr-4(xmlns="http://www.w3.org/2000/svg", viewBox="0 0 24 24")
+          path(d="M6.707 18.293c-0.391 0.391-0.391 1.024 0 1.414s1.024 0.391 1.414 0L12 13.414l3.879 3.879c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414L13.414 12l3.879-3.879c0.391-0.391 0.391-1.024 0-1.414s-1.024-0.391-1.414 0L12 10.586 8.121 6.707c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414L10.586 12l-3.879 3.879z")
+        span.text-sm= notif.message
+  if (notif.type === 'warning')
+    div(class=`border-l-4 border-orange-600 bg-orange-200 text-orange-600 p-4 mb-3`)
+      div.container.mx-auto.flex.items-center
+        svg.w-6.h-6.fill-current.mr-4(xmlns="http://www.w3.org/2000/svg", viewBox="0 0 24 24")
+          path(d="M11.997 3.123a1.485 1.485 0 0 1 1.485 1.485v5.143a1.485 1.485 0 1 1-2.971 0V4.608a1.485 1.485 0 0 1 1.486-1.485zM12 16.8a1.166 1.166 0 1 1-1.166-1.166A1.168 1.168 0 0 1 12 16.8z")
+          path(d="M11.997 19.23c-0.7 0-1.39-0.46-1.66-1.15-0.18-0.44-0.09-0.95 0.25-1.32l0.05-0.06c0.34-0.36 0.84-0.43 1.25-0.15l0.08 0.05c0.43 0.28 0.52 0.85 0.24 1.28-0.24 0.39-0.61 0.63-1.01 0.63zM12 16.8a1.166 1.166 0 1 1-1.166-1.166A1.168 1.168 0 0 1 12 16.8z")
+        span.text-sm= notif.message
