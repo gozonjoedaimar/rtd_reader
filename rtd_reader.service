@@ -1,0 +1,10 @@
+[Unit]
+Description=RTDReader
+After=network.target
+
+[Service]
+WorkingDirectory=/path/to/working/directory
+ExecStart=/path/to/node -r dotenv/config ./bin/www
+
+[Install]
+WantedBy=default.target

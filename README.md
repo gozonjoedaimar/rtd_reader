@@ -40,3 +40,26 @@
 ## Open the docs in your browser
 
     http://localhost:3030
+
+## Run app as a service
+
+Update rtd_reader.service and replace /path/to/* with the actual path from your server
+and copy unit file to /etc/systemd/system
+
+    sudo cp ./rtd_reader.service /etc/systemd/system/
+
+Reload systemd manager configuration.
+
+    sudo systemctl daemon-reload
+
+Start the service using the systemctl command.
+
+    sudo systemctl start rtd_reader
+
+Check the status of your service using the systemctl command.
+
+    sudo systemctl status rtd_reader
+
+Enable your service to start at boot time.
+
+    sudo systemctl enable rtd_reader
