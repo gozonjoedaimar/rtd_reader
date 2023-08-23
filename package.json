@@ -8,7 +8,7 @@
     "build": "npm run tailwind:css",
     "build-start": "npm run tailwind:css && npm start",
     "start-dev": "npx nodemon --exec \"npm run build-start\" --ext pug,js",
-    "build-doc": "sphinx-build -b html docs/ build/html"
+    "build-doc": "rm -rf build/html && sphinx-build -b html docs/ build/html"
   },
   "dependencies": {
     "connect-flash": "^0.1.1",
